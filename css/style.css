@@ -1,18 +1,493 @@
 body {
-    font-family: Roboto, Verdana, sans-serif;
+	margin: 0;
+	padding: 0;
+    font-family: "Roboto", "Verdana", sans-serif;
     font-size: 16px;
-
-
 }
-h2 {
+.btn {
+	text-decoration: none;
+	background: #ed583a;
+	
+}
+.item-title {
     font-size: 35px;
     font-weight: bold;
 }
+.container {
+    width: 860px;
+    margin: 0px auto;
+    padding: 0 20px;
+}
+.clearfix::after {
+    display: table;
+    content: " ";
+}
+.container::after {
+    clear: both;
+}
+.subnav-hidden, .form-hidden {
+	display: none;
+}
+.main-header .container {
+	display: flex;
+	justify-content: space-between;
+}
+.header-left {
+	display: flex;
+	margin-top: 5px;
+	width: 530px;
+}
+nav > ul {
+	display: flex;
+}
+.header-right {
+	width: 260px;
+}
+.header-right-menu {
+	display: flex;
+}
+.schedule {
+	margin-top: 35px;
+	text-align: right;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 16px;
+}
+.tel {
+	text-align: right;
+	font-size: 22px;
+	font-weight: 700;
+	line-height: 24px;
+}
+.basket-hidden {
+	display: none;
+}
+.slider-2, .slider-3 {
+	display: none;
+}
 .slider-title {
-    font-size: 60px;
-    font-weight: bold;
+	margin: 0 auto;
+	margin-bottom: 30px;
+	padding-top: 275px;
+	width: 670px;
+	text-align: center;
+	font-size: 60px;
+	font-weight: 700;
+	line-height: 60px;
+}
+.slider .container {
+	position: relative;
+}
+.slider .container ul {
+	position: absolute;
+	top:400px;
+	width: 40px;
+}
+.slider-purchase-btn {
+	margin: 0 auto;
+	padding: 10px 40px;
+	display: block;
+	width: 200px;
+	text-align: center;
+	font-size: 32px;
+	font-weight: 700;
+	line-height: 44px;
+}
+.bonus {
+	
+}
+.bonus .container {
+	display: flex;
+	justify-content: space-between;
+}
+.bonus-left, .bonus-right {
+	margin-top:40px;
+	width: 420px;
+}
+.bonus-left h2, .bonus-right h2 {
+	margin-top: 20px;
+	margin-bottom: 12px;
+	padding-left: 20px;
+    font-size: 35px;
+	font-weight: 700;
+	line-height: 41px;
+}
+.bonus-left p, .bonus-right p {
+	margin-top: 0px;
+	margin-bottom: 25px;
+	padding-left: 20px;
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 22px;
+}
+.bonus-btn {
+	display: inline-block;
+	padding: 10px 20px;
+	margin-bottom: 30px;
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 24px;
+}
+.bonus-left .bonus-btn {
+	margin-left:240px;
+}
+.bonus-right .bonus-btn {
+	margin-left:210px;
+}
+.gallery .container {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.gallery-item {
+	margin-top: 35px;
+
+	width: 200px;
+}
+.item-icon {
+	display: block;
+	
 }
 .item-title {
-    font-size: 45px;
-    font-weight: bold;
+	margin-top: -55px;
+}
+.item-description {
+	margin-top: 30px;
+	text-align: center;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 22px;
+}
+.item-btn {
+	display: none;
+}
+.features {
+	margin-top:-15px;
+}
+.features h2 {
+	padding-top:53px;
+	padding-left:20px;
+	margin-bottom: 5px;
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 30px;;
+}
+.features-flex-container {
+	padding: 0 20px;
+	padding-bottom: 23px;
+	display: flex;
+	
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.features-item {
+	position: relative;
+	width: 400px;
+}
+.features-item p {
+	margin-left: 55px;
+	margin-bottom: 5px;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 22px;
+	
+	
+}
+.features-icon {
+	position: absolute;
+}
+
+.news .container {
+	padding-bottom: 40px;
+	display: flex;
+	justify-content: space-between;
+}
+.news-blog, .news-subscription {
+	margin-top: 38px;
+	width: 420px;
+	height: 220px;
+}
+.news-blog h2 {
+	margin-top: 25px;
+	margin-left: 20px;
+	margin-bottom: 5px;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 22px;
+}
+.news-blog a {
+	margin-left: 20px;
+	display: block;
+	width: 300px;
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 30px;
+}
+.news-subscription p {
+	margin-top: 35px;
+	margin-left: 25px;
+	margin-right: 25px;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 22px;
+}
+.subscription-form {
+	margin-left: 25px;
+}
+.location {
+	margin-top:4px;
+	background-image: url("img/map.jpg");
+	height: 430px;
+}
+.location-address {
+	margin-top: 35px;
+	margin-left: 560px;
+	width: 300px;
+	background-color: white;
+}
+.location-address p:first-child {
+	padding-top: 30px;
+	padding-left: 25px;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 20px;
+}
+.location-address p:first-child strong {
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 24px;
+}
+.location-address p:nth-child(2) {
+	padding-left: 25px;
+	margin-bottom: 5px;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 20px;
+}
+.location-address p:nth-child(3) {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding-left: 25px;
+	line-height: 22px;
+	font-size: 18px;
+	font-weight: 700;
+}
+.location-address p:nth-child(4) {
+	margin-top: 5px;
+	margin-bottom: 20px;
+	padding-left: 25px;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 22px;
+}
+.location-btn {
+	display:inline-block;
+	margin-left: 25px;
+	margin-bottom: 35px;
+	padding: 10px 25px;
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 24px;
+}
+.breadcrumbs {
+	margin-top: -17px;
+}
+.breadcrumbs ul {
+	margin: 0;
+	padding: 0;
+}
+.breadcrumbs li {
+	display: inline-block;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 16px;
+}
+.main-catalog {
+	margin-top: -18px;
+}
+.main-catalog h1 {
+	font-size: 35px;
+	font-weight: 700;
+	line-height: 41px;
+}
+.main-catalog form {
+	font-size: 0px;
+	min-height: 135px;
+}
+.form-block {
+	display: inline-block;
+	margin-right: 15px;
+	vertical-align: top;
+}
+.form-block label {
+	display: block;
+}
+.form-block  label, .form-block h2 {
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 16px;
+}
+.sorting {
+	margin-top:0px;
+	width: 195px;
+}
+.fatcontent-container {
+	display:flex;
+}
+.filler-container {
+	display: flex;
+}
+.gallery-paginator {
+	display: flex;
+	margin-top: 80px;
+	margin-left: auto;
+	margin-bottom: 35px;
+	width: 190px;
+	min-height: 25px;
+}
+.main-footer .container {
+	display: flex;
+	justify-content: space-between;
+}
+.footer-social {
+	display: flex;
+	justify-content: space-between;
+	width: 185px;
+}
+.footer-btn {
+	margin-top: 30px;
+	width: 40px;
+	height: 40px;
+	font-size: 0px;
+	background-color: white;
+}
+.footer-menu {
+	display: flex;
+	justify-content: space-between;
+	width: 305px;
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 18px;
+}
+.footer-menu  .bold{
+	font-weight: 700;
+}
+.footer-menu ul {
+	margin-top: 30px;
+	padding-left: 0px;
+}
+.footer-menu li {
+	display: block;
+}
+.copyright {
+	width: 190px;
+}
+.footer-logo {
+	display: block;
+	margin-top: 15px;
+	margin-bottom: -10px;
+}
+.copyright p {
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 18px;;
+}
+/*======================================
+ Системное оформление - не изменять
+=======================================*/
+
+body {
+  padding: 3px;
+}
+
+body > *,
+body > * > *,
+body > * > * > * {
+  position: relative;
+}
+
+body > *::before,
+body > * > *::before,
+body > * > * > *::before {
+  content: "";
+  position: absolute;
+
+  height: 24px;
+  padding: 2px 5px;
+
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Courier New", monotype;
+  white-space: nowrap;
+}
+
+body > *::before {
+  top: -3px;
+  left: -3px;
+}
+
+body > * > *::before {
+  top: -3px;
+  left: -3px;
+}
+
+body > * > * > *::before {
+  top: 0;
+  left: 0;
+}
+
+body > * {
+  background: rgba(0, 128, 0, 0.2);
+  box-shadow: 0 0 0 3px green;
+}
+
+body > *::before {
+  color: white;
+
+  background: green;
+}
+
+body > * > * {
+  background: rgba(255, 45, 82, 0.2);
+  box-shadow: 0 0 0 3px rgb(255, 45, 82);
+}
+
+body > * > *::before {
+  color: white;
+
+  background: rgb(255, 45, 82);
+}
+
+body > * > * > * {
+  background: rgba(234, 255, 45, 0.2);
+  box-shadow: inset 0 0 0 2px rgb(234, 255, 45);
+
+}
+
+body > * > * > *::before {
+  color: black;
+
+  background: rgb(234, 255, 45);
+}
+
+.main-header::before {
+  content: ".main-header";
+}
+
+.container::before {
+  content: ".container";
+}
+
+.main-header .container::before {
+  top: auto;
+  bottom: -28px;
+}
+
+.main-navigation::before {
+  content: ".main-navigation";
+}
+
+.user-block::before {
+  content: ".user-block";
 }

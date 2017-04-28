@@ -3,13 +3,15 @@
     <head>
         <meta charset="utf-8">
         <title>HTML Academy: Глейси</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
         <header class="main-header">
             <div class="container">
                 <div class="header-left">
-                    <img class="header-logo" src="img/ligo.png" alt="Логотип Gllacy shop">
+                    <img class="header-logo" src="img/logo.png" width="155" height="64" alt="Логотип Gllacy shop">
                     <nav>
                         <ul>
                             <li class="subnav">
@@ -105,7 +107,7 @@
         <section class="gallery">
             <div class="container">
                 <div class="gallery-item hit">
-                    <img class="item-icon" src="#" alt=" ">
+                    <img class="item-icon" src="img/item-orange.jpg" width="200" alt=" ">
                     <div class="item-title">310 &#8381;/кг</div>
                     <div class="item-description">
                         Сливочное с апельсиновым джемом и цитрусовой стружкой
@@ -113,7 +115,7 @@
                     <a class="item-btn btn" href="#">Быстрый просмотр</a>
                 </div>
                 <div class="gallery-item hit">
-                    <img class="item-icon" src="#" alt=" ">
+                    <img class="item-icon" src="img/item-cofee.jpg" width="200" alt=" ">
                     <div class="item-title">380 &#8381;/кг</div>
                     <div class="item-description">
                         Сливочно-кофейное с кусочками шоколада
@@ -121,7 +123,7 @@
                     <a class="item-btn btn" href="#">Быстрый просмотр</a>
                 </div>
                 <div class="gallery-item hit">
-                    <img class="item-icon" src="#" alt=" ">
+                    <img class="item-icon" src="img/item-strawberry.jpg" width="200" alt=" ">
                     <div class="item-title">355 &#8381;/кг</div>
                     <div class="item-description">
                         Сливочно-клубничное с присыпкой из белого шоколада
@@ -129,7 +131,7 @@
                     <a class="item-btn btn" href="#">Быстрый просмотр</a>
                 </div>
                 <div class="gallery-item hit">
-                    <img class="item-icon" src="#" alt=" ">
+                    <img class="item-icon" src="img/item-caramel.jpg" width="200" alt=" ">
                     <div class="item-title">415 &#8381;/кг</div>
                     <div class="item-description">
                         Сливочное крем-брюле с карамельной подливкой
@@ -143,27 +145,29 @@
             <div class="container">
                 <h2>Магазин Глейси - это онлайн и офлайн магазин по продаже мороженного
                 собственного производства на развес</h2>
-                <div class="features-item manufacture">
-                    <img class="features-icon manufacture-icon" src="#" alt=" ">
-                    <p>Все наше мороженное изготавливается на собственном производстве, с 
-                    использованием современного оборудования и проверенных временем технологий.</p>
-                </div>
-                <div class="features-item suppliers">
-                    <img class="features-icon suppliers-icon" src="#" alt=" ">
-                    <p>Закупка ингридиентов производится только у проверенных фермерских
-                    хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
-                </div>
-                <div class="features-item ingredients">
-                    <img class="features-icon ingredients-icon" src="#" alt=" ">
-                    <p>Для приготовления мороженного используются настоящие сливки высочайшего
-                    качества.Все дополнительные  ингридиенты и добавки произведены из натурального,
-                    экологически чистого сырья.</p>
-                </div>
-                <div class="features-item packing">
-                    <img class="features-icon packing-icon" src="#" alt=" ">
-                    <p>Доставка нашего мороженного до заказчиков осуществляется с специальном 
-                    термопаке, который не дает мороженному растаять в пути и позволяет сохранить
-                    превосходный вкус. </p>
+                <div class="features-flex-container">
+                    <div class="features-item manufacture">
+                        <img class="features-icon manufacture-icon" src="#" alt=" ">
+                        <p>Все наше мороженное изготавливается на собственном производстве, с 
+                        использованием современного оборудования и проверенных временем технологий.</p>
+                    </div>
+                    <div class="features-item suppliers">
+                        <img class="features-icon suppliers-icon" src="#" alt=" ">
+                        <p>Закупка ингридиентов производится только у проверенных фермерских
+                        хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
+                    </div>
+                    <div class="features-item ingredients">
+                        <img class="features-icon ingredients-icon" src="#" alt=" ">
+                        <p>Для приготовления мороженного используются настоящие сливки высочайшего
+                        качества.Все дополнительные  ингридиенты и добавки произведены из натурального,
+                        экологически чистого сырья.</p>
+                    </div>
+                    <div class="features-item packing">
+                        <img class="features-icon packing-icon" src="#" alt=" ">
+                        <p>Доставка нашего мороженного до заказчиков осуществляется с специальном 
+                        термопаке, который не дает мороженному растаять в пути и позволяет сохранить
+                        превосходный вкус. </p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -197,9 +201,9 @@
                         и офлайн магазина:<br>
                         <strong>ул. Большая Конюшенная<br>
                         19/8, Санкт-Петербург</strong></p>
-                        <p>Для заказов по телефону:<br>
-                        <strong>8 812 450-25-25</strong><br>
-                        (с 10 до 20 ежедневно)</p>
+                        <p>Для заказов по телефону:</p>
+                        <p>8 812 450-25-25</p>
+                        <p>(с 10 до 20 ежедневно)</p>
                         <a class="location-btn btn" href="#">Форма обратной связи</a>
                     </div>
                 </div>
@@ -209,10 +213,10 @@
         <footer class="main-footer">
             <div class="container">
                 <div class="footer-social">
-                    <a class="tw-btn btn" href="#">Твиттер"</a>
-                    <a class="inst-btn btn" href="#">Инстаграм"</a>
-                    <a class="fb-btn btn" href="#">Фейсбук"</a>
-                    <a class="vk-btn btn" href="#">Вконтакте</a>
+                    <a class="tw-btn footer-btn" href="#">Твиттер"</a>
+                    <a class="inst-btn footer-btn" href="#">Инстаграм"</a>
+                    <a class="fb-btn footer-btn" href="#">Фейсбук"</a>
+                    <a class="vk-btn footer-btn" href="#">Вконтакте</a>
                 </div>
                 <div class="footer-menu">
                     <ul class="sub-menu-left">
@@ -225,7 +229,7 @@
                     </ul>   
                 </div>
                 <div class="copyright">
-                    <a class="footer-logo" href=""><img src="#" alt="Логотип HTML Academy"></a>
+                    <a class="footer-logo" href=""><img src="img/academy-logo.png" alt="Логотип HTML Academy"></a>
                     <p>Сделано в HTML Academy &copy; 2017</p>
                 </div>
             </div>
