@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>HTML Academy: Глейси</title>
-        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/style.css">
     </head>
@@ -105,9 +105,9 @@
                         </select>
                     </div>
                     <div class="form-block price">
-                        <label for="price-field" name="price" min="100" max="500"  step="50" >Цена: 100 руб - 500 руб</label>
-                        <div id="price-field" class="price-range">
-                            <div class=scale>
+                        <label class="price-field">Цена: 100 руб - 500 руб</label>
+                        <div class="price-field price-range">
+                            <div class="scale">
                                 <div class="toogle toogle-min"></div>
                                 <div class="bar"></div>
                                 <div class="toogle toogle-max"></div>
@@ -175,7 +175,7 @@
                         <img class="item-icon" src="img/item-strawberry.jpg" width="200" alt=" ">
                         <div class="item-title">355 &#8381;<span class="measure">/кг</span></div>
                         <div class="item-description">
-                            <span class="underline">Сливочно-клубничное с присыпкой из белого шоколадаv
+                            <span class="underline">Сливочно-клубничное с присыпкой из белого шоколада</span>
                         </div>
                         <a class="item-btn btn" href="#">Быстрый просмотр</a>
                     </div>
@@ -288,5 +288,6 @@
                 </div>
             </div>
         </footer>
+        <script src="flexibility.js"></script>
     </body>
 </html>
