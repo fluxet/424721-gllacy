@@ -1323,6 +1323,7 @@ body > input[type="radio"] {
     border-radius: 18px;
     -webkit-appearance: none;
        -moz-appearance: none;
+            appearance: none;
     background-image: url("../img/select-btn.png");
     background-repeat: no-repeat;
     background-position: 170px center;
