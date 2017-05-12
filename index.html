@@ -113,7 +113,7 @@
                     <div class="gallery-container">
                         <div class="gallery-item hit">
                             <img class="item-icon" src="img/item-orange.jpg" width="200" alt=" ">
-                            <div class="item-title">310 &#8381;<span class="measure">/кг</span></div>
+                            <div class="item-title">310 <span class="currency">&#8381;</span><span class="measure">/кг</span></div>
                             <div class="item-description">
                                 <span class="underline">Сливочное с апельсиновым джемом и цитрусовой стружкой</span>
                             </div>
@@ -121,7 +121,7 @@
                         </div>
                         <div class="gallery-item hit">
                             <img class="item-icon" src="img/item-cofee.jpg" width="200" alt=" ">
-                            <div class="item-title">380 &#8381;<span class="measure">/кг</span></div>
+                            <div class="item-title">380 <span class="currency">&#8381;</span><span class="measure">/кг</span></div>
                             <div class="item-description">
                                 <span class="underline">Сливочно-кофейное с кусочками шоколада</span>
                             </div>
@@ -129,7 +129,7 @@
                         </div>
                         <div class="gallery-item hit">
                             <img class="item-icon" src="img/item-strawberry.jpg" width="200" alt=" ">
-                            <div class="item-title">355 &#8381;<span class="measure">/кг</span></div>
+                            <div class="item-title">355 <span class="currency">&#8381;</span><span class="measure">/кг</span></div>
                             <div class="item-description">
                                 <span class="underline">Сливочно-клубничное с присыпкой из белого шоколада</span>
                             </div>
@@ -137,7 +137,7 @@
                         </div>
                         <div class="gallery-item hit">
                             <img class="item-icon" src="img/item-caramel.jpg" width="200" alt=" ">
-                            <div class="item-title">415 &#8381;<span class="measure">/кг</span></div>
+                            <div class="item-title">415 <span class="currency">&#8381;</span><span class="measure">/кг</span></div>
                             <div class="item-description">
                                 <span class="underline">Сливочное крем-брюле с карамельной подливкой</span>
                             </div>
@@ -188,19 +188,6 @@
                             <label for="news-email-field">Электронная почта</label>
                             <input class="form-btn btn" type="submit" value="Отправить">
                         </form>
-                        <form class="modal-form " action="#" method="post">
-                            <h3>Мы обязательно вам ответим!</h3>
-                            <input id="first-name-field" type="text" name="first-name" placeholder="Как вас зовут?">
-                            <label for="first-name-field">Как вас зовут?</label>
-                            
-                            <input id="model-email-field" type="email" name="email" placeholder="Ваша почта для ответа?">
-                            <label for="model-email-field">Ваша почта для ответа?</label>
-                            
-                            <textarea id="comments">Напишите что-нибудь...</textarea>
-                            <label for="comments">Напишите что-нибудь...</label>
-                            <input class="btn" type="submit" name="send-button" value="Отправить">
-                            <button class="close-btn" type="button" name="close"></button>
-                        </form>
                     </div>
                 </section>
             </div>
@@ -241,11 +228,24 @@
                         </ul>   
                     </div>
                     <div class="copyright">
-                        <a class="footer-logo" href=""><img src="img/academy-logo.png" alt="Логотип HTML Academy"></a>
-                        <p>Сделано в HTML Academy &copy; 2017</p>
+                        <a class="footer-logo" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/academy-logo.png" alt="Логотип HTML Academy"></a>
+                        <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy; 2017</p>
                     </div>
                 </div>
             </footer>
+            <form class="modal-form" action="#" method="post">
+                <h3>Мы обязательно вам ответим!</h3>
+                <input id="first-name-field" type="text" name="first-name" placeholder="Как вас зовут?">
+                <label for="first-name-field">Как вас зовут?</label>
+                
+                <input id="model-email-field" type="email" name="email" placeholder="Ваша почта для ответа?">
+                <label for="model-email-field">Ваша почта для ответа?</label>
+                
+                <textarea id="comments">Напишите что-нибудь...</textarea>
+                <label for="comments">Напишите что-нибудь...</label>
+                <input class="btn" type="submit" name="send-button" value="Отправить">
+                <button class="close-btn" type="button" name="close"></button>
+            </form>
         </div>
         <script src="flexibility.js"></script>
     </body>
