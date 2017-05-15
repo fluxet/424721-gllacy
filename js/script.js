@@ -1,4 +1,4 @@
-var link = document.querySelector(".subscription-form .form-btn");
+var link = document.querySelector(".location-btn");
 var popup = document.querySelector(".modal-form");
 var close = document.querySelector(".modal-form .close-btn");
 

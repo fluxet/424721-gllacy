@@ -272,11 +272,12 @@ body > input[type="radio"] {
     cursor: pointer;
 }
 .search-form input[type="search"] {
-    padding-top: 12px;
+    margin-top: 4px;
+    padding-top: 15px;
     padding-bottom: 12px;
     padding-left: 10px;
     padding-right: 10px;
-    width: 280px;
+    width: 285px;
     border: none;
     -webkit-box-shadow: 0px 0px 0px 1px rgba(178,178,178,0.52);
             box-shadow: 0px 0px 0px 1px rgba(178,178,178,0.52);
@@ -287,11 +288,19 @@ body > input[type="radio"] {
     color: #323232;
 }
 .search-form label {
-    display: none;
+    display: block;
+    position: absolute;
+    top: 35px;
+    left: 30px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #999999;
+}
+.search-form input:focus ~ label {
+    display: block;
     position: absolute;
     font-size: 12px;
-    margin-top: -54px;
-    margin-left: 10px;
+    margin-top: -29px;
     color: #5b9ddf;
 }
 .search-form input[type="search"]:hover {
@@ -386,17 +395,22 @@ body > input[type="radio"] {
     z-index: 2;
 }
 .form-hidden label {
-    display: none;
+    display: block;
+    position: absolute;
+    margin-top: -50px;
+    margin-left: 15px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #999999;
+}
+.form-hidden input[type="email"]:focus ~ label[for="email-field"],
+.form-hidden input[type="password"]:focus ~ label[for="password-field"] {
+    display: block;
     position: absolute;
     font-size: 12px;
     margin-top: -78px;
     margin-left: 10px;
     color: #5b9ddf;
-}
-.form-hidden input[type="email"]:focus ~ label[for="email-field"],
-.form-hidden input[type="password"]:focus ~ label[for="password-field"],
-.search-form input[type="search"]:focus ~ label[for="search-field"] {
-    display: block;
 }
 .form-hidden input[type="email"], .form-hidden input[type="password"] {
     margin-bottom: 22px;
@@ -1054,15 +1068,20 @@ body > input[type="radio"] {
             box-shadow: 0px 0px 0px 2px rgba(178,178,178,0.52);
 }
 .subscription-form label {
-    display: none;
+    display: block;
     position: absolute;
-    font-size: 12px;
-    margin-top: -57px;
-    margin-left: 10px;
-    color: #5b9ddf;
+    top: 15px;
+    left: 15px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #999999;
 }
 .subscription-form input[type="email"]:focus ~ label[for="news-email-field"] {
     display: block;
+    position: absolute;
+    font-size: 12px;
+    margin-top: -25px;
+    color: #5b9ddf;
 }
 .subscription-form input[type="submit"] {
     display: inline-block;
@@ -1108,16 +1127,18 @@ body > input[type="radio"] {
     display: block;
 }
 .modal-form label {
-    display: none;
+    display: block;
     position: absolute;
-    font-size: 12px;
-    margin-top: -78px;
-    margin-left: 10px;
-    color: #5b9ddf;
+    margin-top: -50px;
+    margin-left: 15px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #999999;
 }
 .modal-form label[for="comments"] {
-    margin-top: -193px;
+    margin-top: -163px;
 }
+
 .modal-form input[type="email"],
 .modal-form input[type="text"] {
     margin-bottom: 22px;
@@ -1155,6 +1176,7 @@ body > input[type="radio"] {
     border-radius: 5px;
     -webkit-box-shadow: 0px 0px 0px 1px rgba(178,178,178,0.52);
             box-shadow: 0px 0px 0px 1px rgba(178,178,178,0.52); 
+    resize: none;
 }
 .modal-form textarea:focus {
     font-size: 16px;
@@ -1168,9 +1190,19 @@ body > input[type="radio"] {
             box-shadow: 0px 0px 0px 2px rgba(178,178,178,0.52);
 }
 .modal-form input[type="email"]:focus ~ label[for="model-email-field"],
-.modal-form input[type="text"]:focus ~ label[for="first-name-field"],
+.modal-form input[type="text"]:focus ~ label[for="first-name-field"] {
+    position: absolute;
+    font-size: 12px;
+    margin-top: -78px;
+    margin-left: 10px;
+    color: #5b9ddf;
+}
 .modal-form textarea:focus ~ label[for="comments"] {
-    display: block;
+    position: absolute;
+    font-size: 12px;
+    margin-top: -193px;
+    margin-left: 10px;
+    color: #5b9ddf;
 }
 .modal-form input[type="submit"] {
     float: right;
@@ -1663,6 +1695,7 @@ body > input[type="radio"] {
 }
 .footer-btn {
     display: inline-block;
+    vertical-align: top;
     position: relative;
     margin-top: 34px;
     margin-left: 3px;
