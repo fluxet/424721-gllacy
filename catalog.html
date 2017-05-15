@@ -35,7 +35,7 @@
                             <a class="search-btn header-btn" href="#">Поиск</a>
                             <form class="search-form form-hidden1" action="#" method="get">
                                 <input type="submit" value="Поиск">
-                                <input id="search-field" type="search" name="search">
+                                <input id="search-field" type="search" name="search" required>
                                 <label for="search-field">Что ищем?</label>
                             </form>
                         </li>
@@ -43,9 +43,9 @@
                             <a class="header-login-btn header-btn" href="#">Вход</a>
                             <div class="form-hidden">
                                 <form class="login-form " action="#" method="post">
-                                    <input id="email-field" type="email" name="email">
+                                    <input id="email-field" type="text" name="email" required>
                                     <label for="email-field">Электронная почта</label>
-                                    <input id="password-field" type="password" name="password">
+                                    <input id="password-field" type="password" name="password" required>
                                     <label for="password-field">Пароль</label>
                                     <input class="btn" type="submit" name="send-button" value="Войти">
                                 </form>

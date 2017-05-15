@@ -296,7 +296,8 @@ body > input[type="radio"] {
     font-weight: 400;
     color: #999999;
 }
-.search-form input:focus ~ label {
+.search-form input:focus ~ label,
+.search-form input[type="search"]:valid ~ label {
     display: block;
     position: absolute;
     font-size: 12px;
@@ -403,7 +404,7 @@ body > input[type="radio"] {
     font-weight: 400;
     color: #999999;
 }
-.form-hidden input[type="email"]:focus ~ label[for="email-field"],
+.form-hidden input[type="text"]:focus ~ label[for="email-field"],
 .form-hidden input[type="password"]:focus ~ label[for="password-field"] {
     display: block;
     position: absolute;
@@ -412,7 +413,7 @@ body > input[type="radio"] {
     margin-left: 10px;
     color: #5b9ddf;
 }
-.form-hidden input[type="email"], .form-hidden input[type="password"] {
+.form-hidden input[type="text"], .form-hidden input[type="password"] {
     margin-bottom: 22px;
     padding-top: 12px;
     padding-bottom: 12px;
@@ -427,12 +428,12 @@ body > input[type="radio"] {
     -webkit-box-shadow: 0px 0px 0px 1px rgba(178,178,178,0.52);
             box-shadow: 0px 0px 0px 1px rgba(178,178,178,0.52); 
 }
-.form-hidden input[type="email"]:focus,
+.form-hidden input[type="text"]:focus,
 .form-hidden input[type="password"]:focus {
     font-weight: 700;
     color: #323232;
 }
-.form-hidden input[type="email"]:hover,
+.form-hidden input[type="text"]:hover,
 .form-hidden input[type="password"]:hover {
     -webkit-box-shadow: 0px 0px 0px 2px rgba(178,178,178,0.52);
             box-shadow: 0px 0px 0px 2px rgba(178,178,178,0.52);
@@ -1045,7 +1046,7 @@ body > input[type="radio"] {
     margin-top: 15px;
     margin-left: 25px;
 }
-.subscription-form input[type="email"] {
+.subscription-form input[type="text"] {
     margin-right: 10px;
     padding: 8px;
     padding-left: 15px;
@@ -1059,11 +1060,11 @@ body > input[type="radio"] {
     -webkit-box-shadow: 0px 0px 0px 1px rgba(178,178,178,0.52);
             box-shadow: 0px 0px 0px 1px rgba(178,178,178,0.52);
 }
-.subscription-form input[type="email"]:focus {
+.subscription-form input[type="text"]:focus {
     font-weight: 700;
     color: #323232;
 }
-.subscription-form input[type="email"]:hover {
+.subscription-form input[type="text"]:hover {
     -webkit-box-shadow: 0px 0px 0px 2px rgba(178,178,178,0.52);
             box-shadow: 0px 0px 0px 2px rgba(178,178,178,0.52);
 }
@@ -1076,7 +1077,7 @@ body > input[type="radio"] {
     font-weight: 400;
     color: #999999;
 }
-.subscription-form input[type="email"]:focus ~ label[for="news-email-field"] {
+.subscription-form input[type="text"]:focus ~ label[for="news-email-field"] {
     display: block;
     position: absolute;
     font-size: 12px;
@@ -1139,8 +1140,8 @@ body > input[type="radio"] {
     margin-top: -163px;
 }
 
-.modal-form input[type="email"],
-.modal-form input[type="text"] {
+.modal-form input[name="first-name"],
+.modal-form input[name="email"] {
     margin-bottom: 22px;
     padding-top: 12px;
     padding-bottom: 12px;
@@ -1155,8 +1156,8 @@ body > input[type="radio"] {
     -webkit-box-shadow: 0px 0px 0px 1px rgba(178,178,178,0.52);
             box-shadow: 0px 0px 0px 1px rgba(178,178,178,0.52); 
 }
-.modal-form input[type="text"]:focus,
-.modal-form input[type="email"]:focus {
+.modal-form input[name="first-name"]:focus,
+.modal-form input[name="email"]:focus {
     font-size: 16px;
     font-weight: 700;
     color: #323232;
@@ -1178,26 +1179,29 @@ body > input[type="radio"] {
             box-shadow: 0px 0px 0px 1px rgba(178,178,178,0.52); 
     resize: none;
 }
-.modal-form textarea:focus {
+.modal-form textarea:focus  {
     font-size: 16px;
     font-weight: 700;
     color: #323232;
 }
-.modal-form input[type="email"]:hover,
+.modal-form input[type="text"]:hover,
 .modal-form input[type="text"]:hover,
 .modal-form textarea:hover {
     -webkit-box-shadow: 0px 0px 0px 2px rgba(178,178,178,0.52);
             box-shadow: 0px 0px 0px 2px rgba(178,178,178,0.52);
 }
-.modal-form input[type="email"]:focus ~ label[for="model-email-field"],
-.modal-form input[type="text"]:focus ~ label[for="first-name-field"] {
+.modal-form input[name="email"]:focus ~ label[for="model-email-field"],
+.modal-form input[name="first-name"]:focus ~ label[for="first-name-field"],
+.modal-form input[name="email"]:valid ~ label[for="model-email-field"],
+.modal-form input[name="first-name"]:valid ~ label[for="first-name-field"] {
     position: absolute;
     font-size: 12px;
     margin-top: -78px;
     margin-left: 10px;
     color: #5b9ddf;
 }
-.modal-form textarea:focus ~ label[for="comments"] {
+.modal-form textarea:focus ~ label[for="comments"],
+.modal-form textarea:valid ~ label[for="comments"] {
     position: absolute;
     font-size: 12px;
     margin-top: -193px;
