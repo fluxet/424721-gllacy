@@ -38,6 +38,7 @@ a:hover {
     cursor: pointer;
 }
 .btn:hover {
+    color: white;
     background: -webkit-gradient(linear, left top, left bottom, from(#f58669), to(#ec6f5e));
     background: linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
     -webkit-box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
@@ -94,6 +95,7 @@ body > input[type="radio"] {
 .main-nav > ul > li {
     display: inline-block;
     position: relative;
+    vertical-align: top;
 }
 .main-nav > ul > li:after {
     content: "";
@@ -202,6 +204,9 @@ body > input[type="radio"] {
 .subnav-active {
     background-color: #d07058;
 }
+.subnav-hidden .subnav-active a {
+    color: white;
+}
 .subnav-hidden .subnav-active a:hover {
     background-color: #d07058;
 }
@@ -276,6 +281,10 @@ body > input[type="radio"] {
     -webkit-box-shadow: 0px 0px 0px 1px rgba(178,178,178,0.52);
             box-shadow: 0px 0px 0px 1px rgba(178,178,178,0.52);
     border-radius: 5px;
+}
+.search-form input[type="search"]:focus {
+    font-weight: 700;
+    color: #323232;
 }
 .search-form label {
     display: none;
@@ -404,6 +413,11 @@ body > input[type="radio"] {
     -webkit-box-shadow: 0px 0px 0px 1px rgba(178,178,178,0.52);
             box-shadow: 0px 0px 0px 1px rgba(178,178,178,0.52); 
 }
+.form-hidden input[type="email"]:focus,
+.form-hidden input[type="password"]:focus {
+    font-weight: 700;
+    color: #323232;
+}
 .form-hidden input[type="email"]:hover,
 .form-hidden input[type="password"]:hover {
     -webkit-box-shadow: 0px 0px 0px 2px rgba(178,178,178,0.52);
@@ -412,7 +426,7 @@ body > input[type="radio"] {
 .form-hidden input[type="submit"] {
     float: left;
     display: inline-block;
-    
+    vertical-align: top;
     padding-top: 12px;
     padding-bottom: 12px;
     padding-left: 25px;
@@ -632,6 +646,7 @@ body > input[type="radio"] {
     margin-right: -5px;
     padding: 13px 15px;
     margin-left: auto;
+    vertical-align:top;
     font-size: 18px;
     font-weight: 700;
     border-radius: 22px;
@@ -674,6 +689,7 @@ body > input[type="radio"] {
     padding-bottom: 12px;
     padding-left: 40px;
     padding-right: 45px;
+    vertical-align: top;
     text-align: center;
     font-size: 32px;
     font-weight: 700;
@@ -764,6 +780,7 @@ body > input[type="radio"] {
 .bonus-btn {
     display: inline-block;
     padding: 10px 20px;
+    vertical-align: top;
     font-size: 18px;
     font-weight: 700;
     line-height: 24px;
@@ -803,14 +820,21 @@ body > input[type="radio"] {
     margin-bottom: -70px;
     padding-top: 10px;
     width: 200px;
-    border-radius: 5px;
-    z-index: 1;
+    
 }
-.gallery-item:hover {
+.gallery-item:hover::after {
+    position: absolute;
+    top: 5px;
+    left: -10px;
+    display: block;
+    content: " ";
+    width:220px;
+    height: 364px;
     background-color: rgba(255,255,255,0.2);
     -webkit-box-shadow: 0 20px 20px rgba(0,0,0,0.4);
             box-shadow: 0 20px 20px rgba(0,0,0,0.4);
-    z-index: 3;
+    border-radius: 5px;
+    z-index: 10;
 }
 .item-icon {
     display: block;
@@ -837,14 +861,18 @@ body > input[type="radio"] {
     font-size: 30px;
 }
 .item-description {
+    position: relative;
+    display: block;
     margin-top: 22px;
     padding-left: 8px;
     padding-right: 8px;
     padding-bottom: 70px;
     text-align: center;
+    text-decoration: none;
     font-size: 16px;
     font-weight: 500;
     line-height: 22px;
+    z-index: 11;
 }
 .underline {
     margin-top: -2px;
@@ -863,7 +891,7 @@ body > input[type="radio"] {
     font-weight: 700;
     line-height: 24px;
     border-radius: 22px;
-    z-index: 2;
+    z-index: 11;
 }
 .gallery-item:hover .item-btn {
     display: block;
@@ -1017,6 +1045,10 @@ body > input[type="radio"] {
     -webkit-box-shadow: 0px 0px 0px 1px rgba(178,178,178,0.52);
             box-shadow: 0px 0px 0px 1px rgba(178,178,178,0.52);
 }
+.subscription-form input[type="email"]:focus {
+    font-weight: 700;
+    color: #323232;
+}
 .subscription-form input[type="email"]:hover {
     -webkit-box-shadow: 0px 0px 0px 2px rgba(178,178,178,0.52);
             box-shadow: 0px 0px 0px 2px rgba(178,178,178,0.52);
@@ -1036,6 +1068,7 @@ body > input[type="radio"] {
     display: inline-block;
     padding: 10px 15px;
     padding-right: 20px;
+    vertical-align: bottom;
     font-size: 18px;
     font-weight: 700;
     line-height: 24px;
@@ -1045,10 +1078,10 @@ body > input[type="radio"] {
 .modal-form {
     display: none;
     position: fixed;
-    top: 338px;
+    top: 50%;
     left: 50%;
     margin-left: -235px;
-    margin-top: 3px;
+    margin-top: -218px;
     padding-top: 17px;
     padding-bottom: 20px;
     padding-left: 22px;
@@ -1060,7 +1093,10 @@ body > input[type="radio"] {
     border-radius: 5px;
     -webkit-box-shadow: 0 20px 20px rgba(0,0,0,0.4);
             box-shadow: 0 20px 20px rgba(0,0,0,0.4);
-    z-index: 1;
+    z-index: 15;
+}
+.modal-form-show {
+    display: block;
 }
 .modal-form h3 {
     margin-top: 0px;
@@ -1098,6 +1134,12 @@ body > input[type="radio"] {
     -webkit-box-shadow: 0px 0px 0px 1px rgba(178,178,178,0.52);
             box-shadow: 0px 0px 0px 1px rgba(178,178,178,0.52); 
 }
+.modal-form input[type="text"]:focus,
+.modal-form input[type="email"]:focus {
+    font-size: 16px;
+    font-weight: 700;
+    color: #323232;
+}
 .modal-form textarea {
     margin-bottom: 22px;
     padding-top: 12px;
@@ -1113,6 +1155,11 @@ body > input[type="radio"] {
     border-radius: 5px;
     -webkit-box-shadow: 0px 0px 0px 1px rgba(178,178,178,0.52);
             box-shadow: 0px 0px 0px 1px rgba(178,178,178,0.52); 
+}
+.modal-form textarea:focus {
+    font-size: 16px;
+    font-weight: 700;
+    color: #323232;
 }
 .modal-form input[type="email"]:hover,
 .modal-form input[type="text"]:hover,
@@ -1133,6 +1180,7 @@ body > input[type="radio"] {
     padding-bottom: 12px;
     padding-left: 25px;
     padding-right: 25px;
+    vertical-align: top;
     text-decoration: none;
     text-align: center;
     color: white;
@@ -1181,6 +1229,7 @@ body > input[type="radio"] {
     margin: 0 auto;
     padding: 0px;
     width: 900px;
+    background-color: #C6BF73;
     background: url("../img/pin.png") no-repeat 185px 140px,
                 url("../img/map.jpg") no-repeat;
 }
@@ -1196,27 +1245,31 @@ body > input[type="radio"] {
     background-color: white;
     border-radius: 10px;
 }
-.location-address p:first-child {
+.address-title {
     padding-top: 30px;
     padding-left: 25px;
+    width: 150px;
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
 }
-.location-address p:first-child strong {
+.address-content {
+    margin-top: 3px;
+    padding-left: 25px;
+    width: 250px;
     font-size: 18px;
     font-weight: 700;
     line-height: 24px;
 }
-.location-address p:nth-child(2) {
-    padding-left: 25px;
-    margin-top: 20px;
+.tel-title {
+    margin-top: 17px;
     margin-bottom: 5px;
+    padding-left: 25px;
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
 }
-.location-address p:nth-child(3) {
+.tel-content {
     margin-top: 5px;
     margin-bottom: 0px;
     padding-left: 25px;
@@ -1224,7 +1277,7 @@ body > input[type="radio"] {
     font-size: 18px;
     font-weight: 700;
 }
-.location-address p:nth-child(4) {
+.address-schedule {
     margin-top: 3px;
     margin-bottom: 20px;
     padding-left: 25px;
@@ -1237,6 +1290,7 @@ body > input[type="radio"] {
     margin-left: 25px;
     margin-bottom: 35px;
     padding: 10px 25px;
+    vertical-align: top;
     font-size: 18px;
     font-weight: 700;
     line-height: 24px;
@@ -1254,6 +1308,7 @@ body > input[type="radio"] {
     display: inline-block;
     position: relative;
     margin-right: 18px;
+    vertical-align: top;
     font-size: 14px;
     font-weight: 400;
     line-height: 16px;
@@ -1300,7 +1355,7 @@ body > input[type="radio"] {
     line-height: 16px;
 }
 .sorting {
-    margin-top: 0px;
+    margin-top: 2px;
     width: 195px;
 }
 .sorting label, .price label {
@@ -1311,7 +1366,7 @@ body > input[type="radio"] {
 }
 .sorting select {
     margin-top: 6px;
-    padding-left: 12px;
+    padding-left: 15px;
     padding-right: 15px;
     width: 100%;
     height: 36px;
@@ -1508,8 +1563,9 @@ body > input[type="radio"] {
             box-shadow: inset 0 0 0 2px rgba(255,255,255,1);
 }
 .main-catalog .form-block-btn {
-    margin-top: 36px;
+    margin-top: 33px;
     margin-right: 0px;
+    padding-top: 7px;
     width: 142px;
     height: 36px;
     font-size: 16px;
@@ -1602,17 +1658,15 @@ body > input[type="radio"] {
     padding-top: 5px;
 }
 .footer-social {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    width: 183px;
+    font-size: 0;
+    width: 185px;
 }
 .footer-btn {
+    display: inline-block;
     position: relative;
     margin-top: 34px;
+    margin-left: 3px;
+    margin-right: 14px;
     width: 32px;
     height: 32px;
     font-size: 0px;
@@ -1662,12 +1716,16 @@ body > input[type="radio"] {
     background-repeat: no-repeat;
     background-position: -5px -94px;
 }
+.footer-social .vk-btn {
+    margin-right: 0px;
+}
 .footer-social .vk-btn::before {
     background-image: url("../img/spritesheet.png");
     background-repeat: no-repeat;
     background-position: -5px -506px;
 }
 .footer-menu {
+    margin-left: 6px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
