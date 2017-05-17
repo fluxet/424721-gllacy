@@ -92,12 +92,12 @@ body > input[type="radio"] {
     padding-bottom: 10px;
     list-style: none;
 }
-.main-nav > ul > li {
+.navigation-list {
     display: inline-block;
     position: relative;
     vertical-align: top;
 }
-.main-nav > ul > li:after {
+.navigation-list:after {
     content: "";
     position: absolute;
     right: 13px;
@@ -118,10 +118,10 @@ body > input[type="radio"] {
     color: #333333;
     background-color: white;
 }
-.main-nav > ul > li > a  {
+.navigation-list > a  {
     border-radius: 26px;
 }
-.main-nav > ul > li > a:active {
+.navigation-list > a:active {
     -webkit-box-shadow: inset 0 2px 1px #696969;
             box-shadow: inset 0 2px 1px #696969;
     background-color: #ededed;
@@ -132,7 +132,7 @@ body > input[type="radio"] {
     padding: 0;
     position: relative;
 }
-.subnav ul a {
+.subnav .subnav-list {
     color: #333333;
 }
 .subnav-hidden {
@@ -164,7 +164,7 @@ body > input[type="radio"] {
     margin-bottom: 8px;
     position: relative;
 }
-.subnav-hidden li:first-child a {
+.subnav-hidden .subnav-title {
     font-size: 14px;
     font-weight: bold;
 }
@@ -195,7 +195,7 @@ body > input[type="radio"] {
 .subnav-hidden a:active {
     background-color: #f6b5a5;
 }
-.catalog-page .subnav > a {
+.catalog-page .subnav-current {
     background-color: #d07058;
 }
 .catalog-page .subnav::after {
@@ -204,10 +204,11 @@ body > input[type="radio"] {
 .subnav-active {
     background-color: #d07058;
 }
-.subnav-hidden .subnav-active a {
+.subnav-active .subnav-list {
     color: white;
 }
-.subnav-hidden .subnav-active a:hover {
+.subnav-active .subnav-list:hover {
+    color: white;
     background-color: #d07058;
 }
 .header-right {
@@ -265,9 +266,9 @@ body > input[type="radio"] {
 }
 .search-form input[type="submit"]:hover {
     background-color: white;
-    background-image: url("../img/search-black.png");
+    background-image: url("../img/sprite.png");
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: 2px -448px;
     background-size: auto;
     cursor: pointer;
 }
@@ -333,11 +334,11 @@ body > input[type="radio"] {
     left: 7px;
     display: block;
     content: " ";
-    background-image: url("../img/spritesheet.png");
+    background-image: url("../img/sprite.png");
     background-repeat: no-repeat;
     width: 17px;
     height: 17px;
-    background-position: -5px -437px;
+    background-position: -5px -428px;
 }
  .search-btn:hover .search-form {
     display: block;
@@ -352,11 +353,11 @@ body > input[type="radio"] {
     left: 15px;
     display: block;
     content: " ";
-    background-image: url("../img/spritesheet.png");
+    background-image: url("../img/sprite.png");
     background-repeat: no-repeat;
     width: 21px;
     height: 19px;
-    background-position: -5px -65px;
+    background-position: -5px -215px;
 }
 .header-login-btn:hover {
     color: black;
@@ -368,11 +369,11 @@ body > input[type="radio"] {
     left: 15px;
     display: block;
     content: " ";
-    background-image: url("../img/enter-black.png");
+    background-image: url("../img/sprite.png");
     background-repeat: no-repeat;
     width: 21px;
     height: 19px;
-    background-position: center;
+    background-position: -5px -244px;
     
 }
 .header-login:hover .form-hidden {
@@ -524,11 +525,11 @@ body > input[type="radio"] {
     left: 15px;
     display: block;
     content: " ";
-    background-image: url("../img/spritesheet.png");
+    background-image: url("../img/sprite.png");
     background-repeat: no-repeat;
     width: 21px;
     height: 20px;
-    background-position: -5px -5px;
+    background-position: -5px -81px;
 }
 .basket-empty-btn:hover {
     color: black;
@@ -540,11 +541,11 @@ body > input[type="radio"] {
     left: 15px;
     display: block;
     content: " ";
-    background-image: url("../img/basket-black.png");
+    background-image: url("../img/sprite.png");
     background-repeat: no-repeat;
     width: 21px;
     height: 19px;
-    background-position: center;
+    background-position: -5px -51px;
 }
 .header-right-menu .basket-full-btn {
     padding-left: 45px;
@@ -558,11 +559,11 @@ body > input[type="radio"] {
     left: 15px;
     display: block;
     content: " ";
-    background-image: url("../img/spritesheet.png");
+    background-image: url("../img/sprite.png");
     background-repeat: no-repeat;
     width: 21px;
     height: 20px;
-   background-position: -5px -35px;
+    background-position: -5px -111px;
 }
 .basket-full-btn {
     color: black;
@@ -605,9 +606,9 @@ body > input[type="radio"] {
     width: 12px;
     height: 12px;
     background-color: transparent;
-    background-image: url("../img/close.png");
+    background-image: url("../img/sprite.png");
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: -5px -167px;
     border: none;
     cursor: pointer;
 }
@@ -685,6 +686,7 @@ body > input[type="radio"] {
 }
 .slider-title {
     padding-top: 277px;
+    padding-bottom: 96px;
     margin-left: auto;
     margin-right: auto;
     width: 690px;
@@ -697,6 +699,8 @@ body > input[type="radio"] {
     display: none;
 }
 .slider-purchase-btn {
+    position: absolute;
+    bottom: 3px;
     display: inline-block;
     margin-top: 30px;
     margin-left: 290px;
@@ -715,7 +719,7 @@ body > input[type="radio"] {
     margin: 0;
     padding: 0;
     position: absolute;
-    top: 447px;
+    bottom: 25px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -771,9 +775,11 @@ body > input[type="radio"] {
             justify-content: space-between;
 }
 .bonus-left, .bonus-right {
+    position: relative;
     margin-top: 20px;
+    padding-bottom: 88px;
     width: 420px;
-    min-height: 230px;
+    
     border-radius: 10px;    
 }
 .bonus-left h2, .bonus-right h2 {
@@ -786,26 +792,23 @@ body > input[type="radio"] {
 }
 .bonus-left p, .bonus-right p {
     margin-top: 0px;
-    margin-bottom: 25px;
+    margin-bottom: 5px;
     padding-left: 20px;
     font-size: 18px;
     font-weight: 700;
     line-height: 22px;
 }
 .bonus-btn {
+    position: absolute;
+    bottom: 25px;
+    right: 23px;
     display: inline-block;
     padding: 10px 20px;
-    vertical-align: top;
+    vertical-align: bottom;
     font-size: 18px;
     font-weight: 700;
     line-height: 24px;
     border-radius: 22px;
-}
-.bonus-left .bonus-btn {
-    margin-left: 240px;
-}
-.bonus-right .bonus-btn {
-    margin-left: 210px;
 }
 .bonus-left {
     background: #7f0c33;
@@ -844,7 +847,7 @@ body > input[type="radio"] {
     display: block;
     content: " ";
     width:220px;
-    height: 364px;
+    height: 100%;
     background-color: rgba(255,255,255,0.2);
     -webkit-box-shadow: 0 20px 20px rgba(0,0,0,0.4);
             box-shadow: 0 20px 20px rgba(0,0,0,0.4);
@@ -1012,7 +1015,7 @@ body > input[type="radio"] {
 .news-blog a:hover {
     color:  rgba(255,188,158,0.4);
 }
-.news-blog a:hover .underline {
+.news-blog-title:hover .underline {
     color: rgb(255,188,158);
 }
 .news-subscription {
@@ -1115,8 +1118,18 @@ body > input[type="radio"] {
             box-shadow: 0 20px 20px rgba(0,0,0,0.4);
     z-index: 15;
 }
+@keyframes form-intro {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 .modal-form-show {
     display: block;
+    animation-name: form-intro;
+    animation-duration: 2s;
 }
 .modal-form h3 {
     margin-top: 0px;
@@ -1251,11 +1264,23 @@ body > input[type="radio"] {
     width: 17px;
     height: 17px;
     background-color: transparent;
-    background-image: url("../img/close-form.png");
+    background-image: url("../img/sprite.png");
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: -5px -188px;
     border: none;
     cursor: pointer;
+}
+@keyframes error {
+    0%, 20%, 40%, 60%, 80%, 100% {
+        background-color: white;
+    }
+    10%, 30%, 50%, 70%, 90% {
+        background-color: #d07058;
+    }
+}
+.form-error {
+    animation-name: error;
+    animation-duration: 1s;
 }
 .location {
     margin-top: -2px;
@@ -1269,17 +1294,23 @@ body > input[type="radio"] {
     background: url("../img/pin.png") no-repeat 185px 140px,
                 url("../img/map.jpg") no-repeat;
 }
+.map iframe {
+    position: absolute;
+    z-index: 0;
+}
 .map .container {
     height: 434px;
     padding-top: 1px;
 }
 .location-address {
+    position: relative;
     margin-top: 62px;
     margin-left: 560px;
     width: 300px;
     color: #323232;
     background-color: white;
     border-radius: 10px;
+    z-index: 2;
 }
 .address-title {
     padding-top: 30px;
@@ -1357,8 +1388,9 @@ body > input[type="radio"] {
     content: " ";
     width: 12px;
     height: 10px;
-    background-image: url("../img/arrow.png");
+    background-image: url("../img/sprite.png");
     background-repeat: no-repeat;
+    background-position: -5px -31px;
 }
 .breadcrumbs li.breadcrumbs-active::after {
     display: none;
@@ -1590,9 +1622,9 @@ body > input[type="radio"] {
 .filler-container input[id="filler-fruits"]:checked ~ label[for="filler-fruits"]::before,
 .filler-container input[id="filler-syrup"]:checked ~ label[for="filler-syrup"]::before,
 .filler-container input[id="filler-jam"]:checked ~ label[for="filler-jam"]::before {
-    background-image: url("../img/checked.png");
+    background-image: url("../img/sprite.png");
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: -3px -138px;
 }
 .filler-container label:hover::before {
     -webkit-box-shadow: inset 0 0 0 2px rgba(255,255,255,1);
@@ -1641,24 +1673,25 @@ body > input[type="radio"] {
     min-height: 25px;
     list-style: none;
 }
-.gallery-paginator li:first-child a {
+.paginator-prev {
     text-indent: -5000px;
-    background-image: url("../img/prev.png");
+    background-image: url("../img/sprite.png");
     background-repeat: no-repeat;
-    background-position: left center;
+    background-position: -5px -398px;
 }
-.gallery-paginator li:last-child a {
+.paginator-next {
     text-indent: -5000px;
-    background-image: url("../img/next.png");
+    background-image: url("../img/sprite.png");
     background-repeat: no-repeat;
-    background-position: right center;
+    background-position: 1px -375px;
 }
 .gallery-paginator a {
     display: block;
     padding-top: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    width: 25px;
     height: 25px;
     border-radius: 50%;
     text-decoration: none;
@@ -1669,8 +1702,8 @@ body > input[type="radio"] {
     color: white;
     background-color: rgba(255,255,255,0.2);
 }
-.gallery-paginator li:first-child a:hover,
-.gallery-paginator li:last-child a:hover {
+.gallery-paginator .paginator-prev:hover,
+.gallery-paginator .paginator-next:hover {
     color: inherit;
     background-color: inherit;
 }
@@ -1739,27 +1772,27 @@ body > input[type="radio"] {
             box-shadow: inset 0 2px 1px #888888;
 }
 .footer-social .tw-btn::before {
-    background-image: url("../img/spritesheet.png");
+    background-image: url("../img/sprite.png");
     background-repeat: no-repeat;
-    background-position: -5px -464px;
+    background-position: -5px -516px;
 }
 .footer-social .inst-btn::before {
-    background-image: url("../img/spritesheet.png");
+    background-image: url("../img/sprite.png");
     background-repeat: no-repeat;
-    background-position: -5px -395px;
+    background-position: -5px -338px;
 }
 .footer-social .fb-btn::before {
-    background-image: url("../img/spritesheet.png");
+    background-image: url("../img/sprite.png");
     background-repeat: no-repeat;
-    background-position: -5px -94px;
+    background-position: -5px -273px;
 }
 .footer-social .vk-btn {
     margin-right: 0px;
 }
 .footer-social .vk-btn::before {
-    background-image: url("../img/spritesheet.png");
+    background-image: url("../img/sprite.png");
     background-repeat: no-repeat;
-    background-position: -5px -506px;
+    background-position: -5px -558px;
 }
 .footer-menu {
     margin-left: 6px;
@@ -1798,9 +1831,9 @@ body > input[type="radio"] {
     content: " ";
     width: 15px;
     height: 13px;
-    background-image: url("../img/spritesheet.png");
+    background-image: url("../img/sprite.png");
     background-repeat: no-repeat;
-    background-position: -5px -372px;
+    background-position: -5px -315px;
 }
 .footer-menu ul {
     margin-top: 30px;
@@ -1822,6 +1855,6 @@ body > input[type="radio"] {
     font-weight: 400;
     line-height: 18px;
 }
-.copyright p a {
+.copyright .copyright-link {
     text-decoration: none;
 }
